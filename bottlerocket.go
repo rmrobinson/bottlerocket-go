@@ -46,6 +46,10 @@ func (br *Bottlerocket) Close() {
 	}
 }
 
+func (br *Bottlerocket) Path() string {
+	return br.path
+}
+
 func (br *Bottlerocket) SendCommand(address string, command string) error {
 	if len(br.path) < 1 {
 		return errors.New("Bottlerocket not set up")
@@ -90,3 +94,4 @@ func (br *Bottlerocket) SendCommand(address string, command string) error {
 
 	return err
 }
+
