@@ -5,7 +5,7 @@ package bottlerocket_go
 #include <fcntl.h>
 #include <errno.h>
 #include <unistd.h>
-#include <br_cmd.h>
+#include "br_cmd.h"
 
 int open_gowrapper(const char* path) {
 	return open(path, O_RDONLY | O_NONBLOCK);
